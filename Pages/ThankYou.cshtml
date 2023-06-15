@@ -1,0 +1,16 @@
+﻿@page
+@model BreadStore.Pages.ThankYouModel
+@{
+}
+
+@{
+    var imagePath = "./images/" + (Model.ImageName + ".jpg");
+}
+
+<div class="text-center">
+    <h1>Thank your for ordering! Your Order Deatails are..!</h1>
+
+    <img src="@imagePath" class="w-25" />
+    <h4>Customer Name: @Model.BreadName</h4>
+    <h5>Bread Size: @Model.BreadSize </h5>
+</div>

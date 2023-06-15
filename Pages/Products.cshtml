@@ -1,0 +1,23 @@
+﻿@page
+@model BreadStore.Pages.ProductsModel
+@{
+}
+
+<div class="text-center">
+    <h1>We Have Variety of Options to Fill Your Taste</h1>
+
+    <div class="row">
+
+        @foreach(var item in Model.BreadModels){
+            var imagePath = "./images/" + (item.ImageName + ".jpg");
+
+            <div class="col-4">
+                <img src="@imagePath" class="w-100">
+                <h5>@item.BreadName</h5>
+                <h6>@item.BreadSize</h6>
+                <h6>@item.BreadPrice $</h6>
+            </div>
+        }
+
+    </div>
+</div>
